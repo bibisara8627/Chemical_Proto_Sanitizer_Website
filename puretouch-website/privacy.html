@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | PureTouch Hand Sanitizer (Student Project)</title>
+  <meta name="description" content="Privacy Policy and data practices for the PureTouch student project website.">
+  <link rel="canonical" href="https://puretouch-sanitizer.example.com/privacy.html">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <meta name="theme-color" content="#1f5f3f">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__in">
+      <a href="index.html#top" class="brand" aria-label="PureTouch Home">
+        <img src="assets/images/logo.svg" alt="PureTouch Logo" width="140" height="35" class="brand__logo-img">
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <nav id="menu" class="nav__menu" aria-label="Main">
+        <a href="index.html#about">About Product</a>
+        <a href="index.html#ingredients">Product Ingredients</a>
+        <a href="index.html#buy">Buy Options</a>
+        <a href="index.html#feedback">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="sec">
+    <div class="wrap wrap--narrow">
+      <header class="sec__head">
+        <p class="eyebrow">Legal &amp; Transparency</p>
+        <h1>Privacy Policy</h1>
+        <p><strong>Status:</strong> Draft — for faculty / advisor review before any launch.</p>
+      </header>
+
+      <div class="notice notice--warn" role="note">
+        <strong>Student Project Notice:</strong> This website is an educational demonstration created as part of a college laboratory project. It is not currently backed by a commercial database or tracking service.
+      </div>
+
+      <article class="card legal-card">
+        <h2>1. Information We Collect</h2>
+        <p>By default, this website runs entirely in your browser as a static site and does <strong>not</strong> collect personal data, track browsing activity with advertising cookies, or log your IP address to a proprietary server.</p>
+
+        <h3>Enquiry Form</h3>
+        <p>If you fill out the enquiry form on the Buy Options section:</p>
+        <ul>
+          <li><strong>Current demo state:</strong> No backend endpoint is connected by default. Your inputs (name, phone number, quantity, message) remain in your local browser session and are <strong>not saved or transmitted anywhere</strong>.</li>
+          <li><strong>Connected state:</strong> If the student team connects a form endpoint (such as Formspree or Google Apps Script), the information you explicitly enter will be transmitted solely to allow the team to reply to your enquiry.</li>
+        </ul>
+
+        <h3>Feedback Form</h3>
+        <p>The feedback form collects rating numbers, category selections, and optional comments. In the demo state, no feedback is stored in a database. If connected to a backend, feedback may be reviewed to improve the project.</p>
+
+        <h2>2. Cookies and Tracking</h2>
+        <p>This website does not use tracking cookies, analytics trackers, or third-party behavioral profiling scripts.</p>
+
+        <h2>3. Third-Party Services</h2>
+        <p>If you click on external links (such as WhatsApp <code>wa.me</code> or a UPI payment application link), you are subject to the privacy policies of those respective services. We do not receive payment records or banking credentials.</p>
+
+        <h2>4. Contact for Privacy Enquiries</h2>
+        <p>If you have questions about this privacy statement or the college project, please reach out via the contact channels listed on the main page (masked phone: <code>92702*****</code>) or the project department supervisor.</p>
+
+        <p class="fine">Last updated: October 2026. Prepared for PureTouch Student Project.</p>
+        <div class="btns" style="margin-top: 24px;">
+          <a href="index.html" class="btn btn--primary">Return to Main Page</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <div>
+        <strong data-brand>PureTouch</strong>
+        <p>A student-made hand sanitizer project, documented openly. PureTouch — Clean Hands, Confident Moments.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="index.html#about">About Product</a>
+        <a href="index.html#ingredients">Product Ingredients</a>
+        <a href="index.html#buy">Buy Options</a>
+        <a href="index.html#feedback">Feedback</a>
+      </nav>
+      <div>
+        <p class="fine"><strong>Legal Links:</strong> <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="disclaimer.html">Disclaimer</a></p>
+        <p class="fine">Product made by <strong>Bibisara Shaikh, Anushka Khaire and Payal Bandagar</strong></p>
+        <p class="fine">© <span id="yr"></span> <span data-brand>PureTouch</span>. College project. All content marked draft / for educational review.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script>
+    document.querySelectorAll("[data-brand]").forEach(n => { n.textContent = (window.SITE_CONFIG && window.SITE_CONFIG.brandName) || "PureTouch"; });
+    document.getElementById("yr").textContent = new Date().getFullYear();
+    const toggle = document.querySelector(".nav__toggle"), menu = document.getElementById("menu");
+    if (toggle && menu) {
+      toggle.addEventListener("click", () => {
+        const open = !menu.classList.contains("open");
+        menu.classList.toggle("open", open);
+        toggle.setAttribute("aria-expanded", String(open));
+      });
+    }
+  </script>
+</body>
+</html>

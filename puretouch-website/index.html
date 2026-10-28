@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PureTouch Hand Sanitizer | Clean Hands, Confident Moments.</title>
+  <meta name="description" content="A student-made hand sanitizer project: formulation transparency, laboratory process, purchase enquiries, and open documentation.">
+  <link rel="canonical" href="https://puretouch-sanitizer.example.com/">
+  
+  <!-- Favicons and theme color -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <meta name="theme-color" content="#1f5f3f">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="PureTouch Hand Sanitizer">
+  <meta property="og:title" content="PureTouch Hand Sanitizer | Student Project">
+  <meta property="og:description" content="A student-made hand sanitizer project: formulation transparency, laboratory process, purchase enquiries, and open documentation.">
+  <meta property="og:url" content="https://puretouch-sanitizer.example.com/">
+  <meta property="og:image" content="https://puretouch-sanitizer.example.com/assets/images/puretouch-social-share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PureTouch Hand Sanitizer bottle and student project documentation">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PureTouch Hand Sanitizer | Student Project">
+  <meta name="twitter:description" content="A student-made hand sanitizer project: formulation transparency, laboratory process, purchase enquiries, and open documentation.">
+  <meta name="twitter:image" content="https://puretouch-sanitizer.example.com/assets/images/puretouch-social-share.jpg">
+
+  <!-- Product Structured Data (JSON-LD) - Honesty rule: No fake aggregateRating or reviews -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "PureTouch Hand Sanitizer",
+    "image": [
+      "https://puretouch-sanitizer.example.com/assets/images/puretouch-hero.jpg"
+    ],
+    "description": "A clear liquid hand sanitizer formulation documented as a college laboratory project. Measured formulation: 75 ml ethanol, 2 ml glycerol, 4.5 ml hydrogen peroxide, 20 ml distilled water (101.5 ml total).",
+    "brand": {
+      "@type": "Brand",
+      "name": "PureTouch"
+    },
+    "category": "Hand Sanitizer",
+    "creator": [
+      {
+        "@type": "Person",
+        "name": "Bibisara Shaikh"
+      },
+      {
+        "@type": "Person",
+        "name": "Anushka Khaire"
+      },
+      {
+        "@type": "Person",
+        "name": "Payal Bandagar"
+      }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "url": "https://puretouch-sanitizer.example.com/#buy",
+      "priceCurrency": "INR",
+      "price": "49",
+      "priceValidUntil": "2027-12-31",
+      "availability": "https://schema.org/PreOrder",
+      "itemCondition": "https://schema.org/NewCondition"
+    }
+  }
+  </script>
+
+  <!-- Privacy-friendly analytics placeholder (off by default) -->
+  <!-- <script defer data-domain="puretouch-sanitizer.example.com" src="https://plausible.io/js/script.js"></script> -->
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Accessible Skip Link -->
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <!-- Header & Navigation (Exactly 4 Main Navigation Links) -->
+  <header class="nav" id="top">
+    <div class="wrap nav__in">
+      <a href="#top" class="brand" aria-label="PureTouch Home">
+        <img src="assets/images/logo.svg" alt="PureTouch Logo" width="140" height="35" class="brand__logo-img">
+        <span class="sr" data-brand>PureTouch</span>
+      </a>
+
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Main Navigation Links -->
+      <nav id="menu" class="nav__menu" aria-label="Main Navigation">
+        <a href="#about">About Product</a>
+        <a href="#ingredients">Product Ingredients</a>
+        <a href="#buy">Buy Options</a>
+        <a href="#feedback">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO SECTION -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="wrap hero__in">
+        <div class="hero__text">
+          <p class="eyebrow">Student project · Hand sanitizer</p>
+          <h1 id="heroTitle"><span data-brand>PureTouch</span> <em>Hand Sanitizer</em></h1>
+          <p class="hero__tag" data-tagline>PureTouch — Clean Hands, Confident Moments.</p>
+          <p class="hero__desc">A clear hand sanitizer solution prepared and measured by hand in our college laboratory. See how it was made, exactly what went into it, and what still needs to be verified.</p>
+          <div class="btns">
+            <a class="btn btn--primary" href="#about">Explore Product</a>
+            <a class="btn btn--ghost" href="#making">View Making Process</a>
+            <button id="btnShare" class="btn btn--ghost btn--sm" type="button" aria-label="Share this project">
+              <span aria-hidden="true">🔗</span> Share
+            </button>
+          </div>
+        </div>
+
+        <figure class="hero__fig">
+          <div class="hero__frame">
+            <img src="assets/images/puretouch-hero.jpg" alt="PureTouch hand sanitizer: a white spray bottle with a teal window and the PureTouch logo" width="1254" height="1254" fetchpriority="high">
+          </div>
+          <figcaption id="heroCredit">Pack design image. The label shows 30 mL; our proposed pack is approx. 100 ml.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP (Verified Facts Only - No Invented Claims) -->
+    <aside class="trust-strip" aria-label="Verified Project Facts">
+      <div class="wrap trust-strip__in">
+        <div class="trust-item"><span class="trust-item__icon" aria-hidden="true">🎓</span> Student-made</div>
+        <div class="trust-item"><span class="trust-item__icon" aria-hidden="true">🧪</span> Ingredients fully listed</div>
+        <div class="trust-item"><span class="trust-item__icon" aria-hidden="true">🔬</span> Lab process shown</div>
+        <div class="trust-item"><span class="trust-item__icon" aria-hidden="true">🏷️</span> Proposed ₹49 / ~100 ml</div>
+      </div>
+    </aside>
+
+    <!-- 01 · ABOUT PRODUCT -->
+    <section id="about" class="sec">
+      <div class="wrap">
+        <header class="sec__head">
+          <p class="eyebrow">01 · About Product</p>
+          <h2>A sanitizer we prepared ourselves</h2>
+          <p class="team-credit" style="color: var(--green-d); font-weight: 600; font-size: 1.05rem; margin-bottom: 0.8em;">Product made by <strong>Bibisara Shaikh, Anushka Khaire and Payal Bandagar</strong></p>
+          <p>This website presents a hand sanitizer made by students as a laboratory project. Everything shown here comes from our own photos and measurements. Details we have not yet confirmed are marked clearly.</p>
+        </header>
+
+        <!-- 3 Info Cards -->
+        <div class="grid3">
+          <article class="card">
+            <h3>Purpose</h3>
+            <p>A liquid hand sanitizer for a proposed pack of about 100 ml, prepared and documented as a student project.</p>
+          </article>
+          <article class="card">
+            <h3>Appearance</h3>
+            <p>Clear, colourless liquid with fine bubbles, as seen in the product photo.</p>
+          </article>
+          <article class="card">
+            <h3>Prepared in</h3>
+            <p>A college chemistry laboratory using measuring cylinders and beakers.</p>
+          </article>
+        </div>
+
+        <!-- Structured Directions & Precautions Block -->
+        <div class="grid2 info" style="margin-top: 24px;">
+          <article class="card card--note">
+            <h3>Directions for use <span class="tag tag--todo">General guidance, to be confirmed by the team</span></h3>
+            <ul id="directionsList" class="list" style="margin-bottom: 0;">
+              <li>Apply a small amount (approximately 2–3 ml) to dry hands. (To be confirmed)</li>
+              <li>Rub hands thoroughly covering palms, backs, and fingers until completely dry. (To be confirmed)</li>
+              <li>Allow to air-dry without wiping off. (To be confirmed)</li>
+            </ul>
+          </article>
+
+          <article class="card card--note">
+            <h3>Precautions &amp; storage <span class="tag tag--todo">General guidance, to be confirmed by the team</span></h3>
+            <ul id="precautionsList" class="list" style="margin-bottom: 0;">
+              <li>For external use only. Keep away from eyes. Do not ingest. Keep out of reach of children.</li>
+              <li>Alcohol-based products are flammable: keep away from open flame, heat, and sparks.</li>
+              <li>Store in a cool place, tightly closed. Stop use if skin irritation occurs.</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Product Photo Gallery with Lightbox -->
+        <div class="sub">
+          <h3 class="sub__title">Product Photos</h3>
+          <p class="sub__lead">Packaging models and visual references. Click any image to view in full detail.</p>
+          <div id="productGallery" class="gallery">
+            <!-- Dynamically populated from config.galleryImages -->
+          </div>
+        </div>
+
+        <!-- HOW OUR PRODUCT IS MADE (Timeline) -->
+        <div id="making" class="sub">
+          <h3 class="sub__title">How Our Product Is Made</h3>
+          <p class="sub__lead">Moments from our laboratory session, in order. Captions describe only what is visible in each real photograph.</p>
+          <ol class="steps">
+            <li class="step">
+              <figure>
+                <img src="assets/images/step1-titration-setup.jpg" alt="Two students looking at a tall glass cylinder held on a stand in the laboratory" loading="lazy" width="960" height="1280">
+              </figure>
+              <div>
+                <span class="step__n">1</span>
+                <h4>Setting up the equipment</h4>
+                <p>Two team members check a tall cylinder clamped on a laboratory stand before measuring begins.</p>
+              </div>
+            </li>
+            <li class="step">
+              <figure>
+                <img src="assets/images/step2-measuring-pouring.jpg" alt="A student pouring liquid from a measuring cylinder into a small beaker" loading="lazy" width="1200" height="900">
+              </figure>
+              <div>
+                <span class="step__n">2</span>
+                <h4>Measuring the liquid</h4>
+                <p>A measured amount is poured from a graduated cylinder into a beaker.</p>
+              </div>
+            </li>
+            <li class="step">
+              <figure>
+                <img src="assets/images/step3-mixing.jpg" alt="A student pouring a liquid from one small container into a beaker" loading="lazy" width="960" height="1280">
+              </figure>
+              <div>
+                <span class="step__n">3</span>
+                <h4>Combining the components</h4>
+                <p>Liquid is transferred into a beaker. What exactly is being added needs to be confirmed by the team.</p>
+              </div>
+            </li>
+            <li class="step step--final">
+              <figure>
+                <img src="assets/images/final-product-beaker.jpg" alt="Finished clear sanitizer solution in a 100 ml beaker" loading="lazy" width="1200" height="900">
+              </figure>
+              <div>
+                <span class="step__n">4</span>
+                <h4>The finished solution</h4>
+                <p>The result: a clear liquid in a 100 ml beaker, ready for checking.</p>
+              </div>
+            </li>
+          </ol>
+
+          <h4 class="sub__title" style="font-size: 1.25rem; margin-top: 36px;">Making-of videos</h4>
+          <div id="makingVideos" class="vids" aria-live="polite"></div>
+        </div>
+
+        <!-- FREQUENTLY ASKED QUESTIONS (Accordion) -->
+        <div class="sub">
+          <h3 class="sub__title">Frequently Asked Questions</h3>
+          <p class="sub__lead">Honest answers to common questions about our student formulation and project status.</p>
+          <div id="faqAccordion" class="faq-list">
+            <!-- Dynamically populated from config.faq -->
+          </div>
+        </div>
+
+        <!-- MADE BY / MEET THE TEAM SUBSECTION -->
+        <div id="team" class="sub">
+          <h3 class="sub__title">Made By / Meet the Team</h3>
+          <p class="sub__lead">Product made by <strong>Bibisara Shaikh, Anushka Khaire and Payal Bandagar</strong> as an academic laboratory formulation exercise.</p>
+
+          <dl class="team-meta">
+            <div><dt>Institution / College</dt><dd id="teamCollege">To be added / College Name</dd></div>
+            <div><dt>Department</dt><dd id="teamDept">To be added / Department of Chemistry</dd></div>
+            <div><dt>Course / Subject</dt><dd id="teamCourse">To be added / Subject Name</dd></div>
+            <div><dt>Academic Year</dt><dd id="teamYear">To be added / Academic Year</dd></div>
+            <div><dt>Faculty Project Guide</dt><dd id="teamGuide">To be added / Project Guide</dd></div>
+          </dl>
+
+          <div id="teamGrid" class="team-grid">
+            <!-- Dynamically populated from config.team -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · PRODUCT INGREDIENTS -->
+    <section id="ingredients" class="sec sec--mint">
+      <div class="wrap">
+        <header class="sec__head">
+          <p class="eyebrow">02 · Product Ingredients</p>
+          <h2>Ingredient transparency</h2>
+          <p>These are the exact quantities our team measured out for one batch. They are quantities used, not final concentrations.</p>
+        </header>
+
+        <!-- 4 Ingredient Cards -->
+        <div id="ingredientGrid" class="grid4"></div>
+
+        <p class="total">
+          <strong>Sum of measured quantities: 101.5 ml</strong> (75 ml Ethanol + 2 ml Glycerol + 4.5 ml Hydrogen Peroxide + 20 ml Distilled Water). We do not label the batch as exactly 100 ml until its final volume is measured.
+        </p>
+
+        <div class="notice notice--warn" role="note">
+          <strong>Verification needed.</strong> The final formulation and alcohol concentration must be verified before any efficacy claim is made or the product is sold. Using 75 ml of ethanol does not mean the finished sanitizer is 75% alcohol, because that depends on the strength of the ethanol used and on how the ingredients combine.
+        </div>
+
+        <!-- Formulation Summary Table -->
+        <div class="sub" style="margin-top: 40px;">
+          <h3 class="sub__title">Formulation Summary</h3>
+          <div class="table-wrap">
+            <table class="data-table" aria-label="PureTouch Measured Formulation Summary">
+              <thead>
+                <tr>
+                  <th scope="col">Ingredient</th>
+                  <th scope="col">Supplied Quantity</th>
+                  <th scope="col">General Role</th>
+                  <th scope="col">Stock Strength</th>
+                </tr>
+              </thead>
+              <tbody id="formulationTableBody">
+                <!-- Populated dynamically -->
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td><strong>Total Measured Components</strong></td>
+                  <td><strong>101.5 ml</strong></td>
+                  <td>Combined batch mixture</td>
+                  <td>Subject to yield verification</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <!-- Batch & Traceability Card -->
+        <div class="sub" style="margin-top: 36px;">
+          <article class="card batch-card">
+            <h3 style="margin-bottom: 16px;">Batch &amp; Traceability <span class="tag tag--todo">To be added</span></h3>
+            <dl>
+              <div><dt>Batch Number</dt><dd id="trBatch">To be added</dd></div>
+              <div><dt>Manufacture Date</dt><dd id="trMfd">To be added</dd></div>
+              <div><dt>Best-Before / Expiry</dt><dd id="trExp">To be added</dd></div>
+              <div><dt>Final Measured Volume</dt><dd id="trVol">To be added (Supplied batch: 101.5 ml)</dd></div>
+              <div><dt>Prepared By</dt><dd id="trPrep">To be added</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <!-- Why These Ingredients? -->
+        <div class="sub why">
+          <h3 class="sub__title">Why These Ingredients?</h3>
+          <div class="grid2">
+            <article class="card">
+              <h4>Alcohol base + water</h4>
+              <p>Ethanol is the main component in alcohol-based sanitizers, and distilled water adjusts the mixture's strength. The balance between the two is what determines the final alcohol concentration, which is still to be verified.</p>
+            </article>
+            <article class="card">
+              <h4>Glycerol + hydrogen peroxide</h4>
+              <p>Glycerol is a common skin-friendly additive, and hydrogen peroxide appears in some published sanitizer recipes. Why our team chose these amounts is for the team to explain from its lab notes.</p>
+            </article>
+          </div>
+          <p class="fine">General roles only. They describe how these ingredients are typically used, not proof of how PureTouch performs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT TESTING & QUALITY CHECK -->
+    <section id="testing" class="sec">
+      <div class="wrap">
+        <header class="sec__head">
+          <p class="eyebrow">Quality &amp; Safety</p>
+          <h2><span data-brand>PureTouch</span> — Product Testing &amp; Quality Check</h2>
+          <p>We separate three different things so nothing is overstated.</p>
+        </header>
+
+        <ul class="legend" aria-label="Evidence types">
+          <li><span class="tag tag--demo">Demonstration</span> Footage of a check being done</li>
+          <li><span class="tag tag--prop">Proposed test</span> A check we plan to do</li>
+          <li><span class="tag tag--lab">Validated lab result</span> A result from a qualified lab</li>
+        </ul>
+
+        <div class="test">
+          <div id="testingVideo" class="test__video"></div>
+          <article class="card test__card">
+            <h3>Testing results <span class="tag tag--todo">Testing information to be added</span></h3>
+            <dl>
+              <div><dt>Test name</dt><dd>Testing information to be added</dd></div>
+              <div><dt>Procedure</dt><dd>Testing information to be added</dd></div>
+              <div><dt>Observed result</dt><dd>Testing information to be added</dd></div>
+              <div><dt>Date</dt><dd>Testing information to be added</dd></div>
+              <div><dt>Testing facility</dt><dd>Testing information to be added</dd></div>
+            </dl>
+            <p class="fine">No efficacy or safety claim is made until a qualified laboratory result is supplied.</p>
+          </article>
+        </div>
+
+        <!-- Testing Checklist Card (Config Driven) -->
+        <div class="sub" style="margin-top: 36px;">
+          <article class="card">
+            <h3>Testing Checklist <span class="tag tag--prop">Proposed test</span></h3>
+            <p style="color: var(--muted); font-size: 0.95rem;">
+              Quality and safety verification steps. Unchecked items remain pending until certified with a date and verified record in <code>js/config.js</code>.
+            </p>
+            <ul id="testingChecklist" class="checklist">
+              <!-- Dynamically populated from config.testingChecklist -->
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="sub__title">What still needs to be recorded</h3>
+        <div class="grid2 split">
+          <article class="card">
+            <h4>Visual quality checks <span class="tag tag--prop">Proposed test</span></h4>
+            <ul class="list">
+              <li>Appearance: colour and clarity of the finished liquid</li>
+              <li>Consistency: is it uniform, with no particles</li>
+              <li>Packaging: close the bottle, invert it, check for leaks</li>
+              <li>Final volume: measure it, since the supplied quantities add up to 101.5 ml</li>
+            </ul>
+            <p class="fine">Easy to film. These show quality, not germ-killing ability.</p>
+          </article>
+          <article class="card">
+            <h4>Laboratory efficacy testing <span class="tag tag--prop">Proposed test</span></h4>
+            <ul class="list">
+              <li>Alcohol concentration measured by a qualified facility</li>
+              <li>Antimicrobial testing under supervision</li>
+              <li>Skin-safety review before any sale</li>
+            </ul>
+            <p class="fine">Only a qualified laboratory result can support a germ-killing claim. None exists yet.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · BUY OPTIONS -->
+    <section id="buy" class="sec sec--mint">
+      <div class="wrap">
+        <header class="sec__head">
+          <p class="eyebrow">03 · Buy Options</p>
+          <h2>Order or enquire about PureTouch</h2>
+          <p>PureTouch is a student project and is not yet confirmed as commercially available. Enquire first. Payment features below are for demonstration unless marked otherwise.</p>
+        </header>
+
+        <!-- Product Purchase Card with Quantity Selector & Live Total -->
+        <article class="buy card">
+          <div class="buy__img">
+            <img src="assets/images/puretouch-hero.jpg" alt="PureTouch hand sanitizer bottle packaging" loading="lazy" width="1254" height="1254">
+          </div>
+          <div class="buy__body">
+            <h3><span data-brand>PureTouch</span> Hand Sanitizer</h3>
+            <dl class="buy__meta">
+              <div><dt>Proposed pack</dt><dd id="buySize">Approx. 100 ml</dd></div>
+              <div><dt>Proposed price</dt><dd class="price" id="buyPrice">₹49</dd></div>
+              <div><dt>Availability</dt><dd>To be confirmed</dd></div>
+            </dl>
+            <p class="tag tag--todo tag--block">Proposed price — subject to confirmation</p>
+            <p class="fine" id="introNote" style="margin-top: 4px;"></p>
+
+            <!-- Quantity Selector -->
+            <div class="qty-ctrl">
+              <label for="buyQtyInput">Quantity:</label>
+              <button id="qtyDecBtn" class="qty-btn" type="button" aria-label="Decrease quantity">−</button>
+              <input id="buyQtyInput" class="qty-input" type="number" min="1" max="20" step="1" value="1" aria-label="Quantity of bottles">
+              <button id="qtyIncBtn" class="qty-btn" type="button" aria-label="Increase quantity">+</button>
+            </div>
+
+            <!-- Order Summary Box -->
+            <div class="order-summary" aria-label="Enquiry Order Summary">
+              <h4>Enquiry Summary <span class="tag tag--todo" style="font-size: 0.72rem;">Not a confirmed order</span></h4>
+              <dl>
+                <dt>Product:</dt><dd><span data-brand>PureTouch</span> Sanitizer</dd>
+                <dt>Pack Size:</dt><dd id="summaryPack">Approx. 100 ml</dd>
+                <dt>Quantity:</dt><dd id="summaryQty">1 bottle</dd>
+                <dt>Rate:</dt><dd id="summaryRate">₹49 / bottle</dd>
+              </dl>
+              <div class="order-summary__total">
+                <span>Proposed Total:</span>
+                <span id="summaryTotal">₹49</span>
+              </div>
+              <p class="fine" style="margin-top: 6px; font-size: 0.8rem;">Proposed price — subject to confirmation.</p>
+            </div>
+
+            <div class="btns">
+              <a id="buyBtn" class="btn btn--primary" href="#enquiry">Order / Enquire Now</a>
+              <a id="payBtn" class="btn btn--ghost" href="#payment">Pay / Scan QR</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Payment & Enquiry Grid -->
+        <div class="grid2 pay-enq">
+          <!-- PAYMENT CARD -->
+          <section id="payment" class="card pay" aria-labelledby="payTitle">
+            <h3 id="payTitle">Scan to Pay</h3>
+            <p class="demo-badge" id="qrBadge">DEMO ONLY — NOT A REAL PAYMENT QR</p>
+            <div class="qr">
+              <img id="qrImg" src="assets/images/demo-qr.png" alt="Demo QR code. It only contains the text: demo only, not a real payment QR" width="703" height="703">
+            </div>
+            <ol class="how">
+              <li>Open a UPI app on your phone.</li>
+              <li>Choose “Scan QR” and point the camera at the code.</li>
+              <li>Check the payee name and amount shown by your app before paying.</li>
+            </ol>
+            <div class="btns">
+              <button id="qrEnlarge" class="btn btn--ghost" type="button">Enlarge QR</button>
+              <button id="copyUpiBtn" class="btn btn--ghost" type="button" hidden>Copy UPI ID</button>
+              <a id="upiBtn" class="btn btn--primary" href="#" hidden>Open in UPI app</a>
+            </div>
+            <p class="fine" id="payNote" style="margin-top: 14px;"></p>
+          </section>
+
+          <!-- ENQUIRY CARD -->
+          <section id="enquiry" class="card enq" aria-labelledby="enqTitle">
+            <h3 id="enqTitle">Enquire about PureTouch</h3>
+            <p class="contact">Contact number: <strong id="phoneShown">92702*****</strong></p>
+            <p class="fine" id="phoneNote"></p>
+            <div class="btns" id="contactBtns"></div>
+
+            <form id="enqForm" class="form" novalidate>
+              <div class="field">
+                <label for="enqName">Name <span class="req">*</span></label>
+                <input id="enqName" type="text" autocomplete="name" maxlength="60" aria-describedby="enqNameErr" placeholder="Your name">
+                <p class="err" id="enqNameErr" role="alert"></p>
+              </div>
+              <div class="field">
+                <label for="enqContact">Contact number or email <span class="opt">(optional)</span></label>
+                <input id="enqContact" type="text" inputmode="tel" autocomplete="tel" maxlength="40" aria-describedby="enqContactErr" placeholder="Phone number or email">
+                <p class="err" id="enqContactErr" role="alert"></p>
+              </div>
+              <div class="field">
+                <label for="enqQty">Quantity of interest (1–20) <span class="req">*</span></label>
+                <input id="enqQty" type="number" min="1" max="20" step="1" inputmode="numeric" value="1" aria-describedby="enqQtyErr">
+                <p class="err" id="enqQtyErr" role="alert"></p>
+              </div>
+              <div class="field">
+                <label for="enqMsg">Message <span class="req">*</span></label>
+                <textarea id="enqMsg" rows="3" maxlength="400" aria-describedby="enqMsgErr" placeholder="Write your enquiry message here (minimum 5 characters)"></textarea>
+                <p class="err" id="enqMsgErr" role="alert"></p>
+              </div>
+              <button class="btn btn--primary" type="submit">Submit Enquiry</button>
+              <p id="enqOk" class="notice" role="status" hidden></p>
+            </form>
+          </section>
+        </div>
+
+        <!-- SHIPPING, DELIVERY & RETURNS POLICY (Honest Placeholder) -->
+        <div class="sub" style="margin-top: 36px;">
+          <article class="card">
+            <h3>Shipping, Delivery &amp; Returns <span class="tag tag--todo">To be added</span></h3>
+            <div class="grid2" style="margin-top: 14px;">
+              <div>
+                <h4>Shipping &amp; Delivery</h4>
+                <p id="policyShipping" style="color: var(--muted);">Not yet decided / to be added upon project commercialization.</p>
+              </div>
+              <div>
+                <h4>Returns &amp; Refunds</h4>
+                <p id="policyReturns" style="color: var(--muted);">Not yet decided / to be added upon project commercialization.</p>
+              </div>
+            </div>
+            <p class="fine">Honesty note: This is an academic student project. No commercial shipping carriers or automated return logistics are connected.</p>
+          </article>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <div id="contact" class="sub contact-sec">
+          <article class="card contact-card">
+            <h3>Contact Information</h3>
+            <dl>
+              <div><dt>Phone (As supplied)</dt><dd id="contactPhone">92702*****</dd></div>
+              <div><dt>Email</dt><dd id="contactEmail">contact@puretouch-example.edu (Placeholder)</dd></div>
+              <div><dt>College Campus</dt><dd id="contactAddress">Department of Chemistry, College Campus (To be added)</dd></div>
+              <div><dt>Working Hours</dt><dd id="contactHours">Academic term weekdays, 10:00 AM – 4:00 PM (Placeholder)</dd></div>
+            </dl>
+            <div class="map-ph" id="contactMap">
+              <div>
+                <span style="font-size: 1.8rem;" aria-hidden="true">📍</span>
+                <p style="margin: 6px 0 0; font-weight: 600;">Campus Map Location</p>
+                <p style="margin: 0; font-size: 0.85rem;">Map embed to be added once institutional address is confirmed.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- MARKET PRICE REFERENCE -->
+        <div class="market card" aria-labelledby="mpTitle" style="margin-top: 36px;">
+          <h3 id="mpTitle">Market Price Reference</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Product (100 ml)</th>
+                <th scope="col">Price seen online</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Savlon Hand Sanitizer Gel</td><td>approx. ₹50</td></tr>
+              <tr><td>Savlon Moisturizing Sanitizer</td><td>approx. ₹58.65 on one listing; MRP ₹69 on another</td></tr>
+            </tbody>
+          </table>
+          <p class="fine">Prices vary by seller, date and location. These are listings our team reviewed for context only. These products are not claimed to have the same formulation as PureTouch.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENLARGED QR DIALOG -->
+    <dialog id="qrDialog" class="qrdlg" aria-label="Enlarged QR code">
+      <p class="demo-badge" id="qrBadge2">DEMO ONLY — NOT A REAL PAYMENT QR</p>
+      <img id="qrBig" src="assets/images/demo-qr.png" alt="Enlarged QR code" width="703" height="703">
+      <button id="qrClose" class="btn btn--primary" type="button">Close</button>
+    </dialog>
+
+    <!-- LIGHTBOX DIALOG -->
+    <dialog id="lightboxDlg" class="lightbox" aria-label="Image Preview Lightbox">
+      <div class="lightbox__body">
+        <button id="lightboxClose" class="lightbox__close" type="button" aria-label="Close preview">✕</button>
+        <img id="lightboxImg" class="lightbox__img" src="assets/images/puretouch-hero.jpg" alt="Enlarged preview">
+        <p id="lightboxCap" class="lightbox__caption"></p>
+      </div>
+    </dialog>
+
+    <!-- 04 · FEEDBACK SECTION -->
+    <section id="feedback" class="sec">
+      <div class="wrap wrap--narrow">
+        <header class="sec__head">
+          <p class="eyebrow">04 · Feedback</p>
+          <h2>Tell us what you think</h2>
+          <p>Help us improve our student project. Leave your rating, impressions, or questions below.</p>
+        </header>
+
+        <form id="fbForm" class="card form" novalidate>
+          <!-- Honeypot spam trap -->
+          <input type="text" name="website_url" class="sr-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="field">
+            <label for="fbName">Name <span class="opt">(optional)</span></label>
+            <input id="fbName" name="name" type="text" autocomplete="name" maxlength="60" placeholder="Your name">
+          </div>
+
+          <fieldset class="field" aria-describedby="ratingErr">
+            <legend>Rating <span class="req">*</span></legend>
+            <div class="stars" role="radiogroup" aria-label="Rating from 1 to 5">
+              <input type="radio" name="rating" id="r5" value="5"><label for="r5" title="5 stars"><span class="sr">5 stars</span>★</label>
+              <input type="radio" name="rating" id="r4" value="4"><label for="r4" title="4 stars"><span class="sr">4 stars</span>★</label>
+              <input type="radio" name="rating" id="r3" value="3"><label for="r3" title="3 stars"><span class="sr">3 stars</span>★</label>
+              <input type="radio" name="rating" id="r2" value="2"><label for="r2" title="2 stars"><span class="sr">2 stars</span>★</label>
+              <input type="radio" name="rating" id="r1" value="1"><label for="r1" title="1 star"><span class="sr">1 star</span>★</label>
+            </div>
+            <p class="err" id="ratingErr" role="alert"></p>
+          </fieldset>
+
+          <div class="field">
+            <label for="fbCat">Category <span class="req">*</span></label>
+            <select id="fbCat" name="category" aria-describedby="catErr">
+              <option value="">Choose one…</option>
+              <option>Product experience</option>
+              <option>Fragrance &amp; Feel</option>
+              <option>Packaging &amp; Label</option>
+              <option>Website &amp; Transparency</option>
+              <option>Other</option>
+            </select>
+            <p class="err" id="catErr" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="fbMsg">Comment <span class="req">*</span></label>
+            <textarea id="fbMsg" name="comment" rows="4" maxlength="500" aria-describedby="msgErr msgCount" placeholder="Share your constructive suggestions or comments"></textarea>
+            <p class="fine" id="msgCount">0 / 500</p>
+            <p class="err" id="msgErr" role="alert"></p>
+          </div>
+
+          <button class="btn btn--primary" type="submit">Submit Feedback</button>
+          <p id="fbOk" class="notice notice--ok" role="status" hidden></p>
+          <p class="fine">Backend needed: this form checks your input but saves nothing until a database or form service is connected (set <code>feedbackEndpoint</code> in <code>js/config.js</code>).</p>
+        </form>
+
+        <!-- REVIEWS AREA (Honest State) -->
+        <div class="reviews-block" aria-label="Customer & Student Reviews">
+          <h3 style="margin-bottom: 12px;">Submitted Reviews</h3>
+          <div id="reviewsContainer">
+            <div class="reviews-empty">
+              <div class="reviews-empty__icon" aria-hidden="true">💬</div>
+              <p><strong>No reviews yet. Be the first.</strong></p>
+              <p class="fine" style="margin-top: 4px;">Reviews appear here when submitted and approved through a connected backend.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MOBILE STICKY BOTTOM BAR -->
+  <aside id="bottomBar" class="bottom-bar" aria-label="Quick Actions">
+    <div class="bottom-bar__in">
+      <a href="#enquiry" class="btn btn--primary">Enquire Now</a>
+      <a href="#payment" class="btn btn--ghost">Pay / Scan QR</a>
+    </div>
+  </aside>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Scroll back to top">↑</button>
+
+  <!-- TOAST CONTAINER -->
+  <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <div>
+        <a href="#top" style="text-decoration: none;">
+          <strong data-brand>PureTouch</strong>
+        </a>
+        <p style="margin-top: 8px;">A student-made hand sanitizer project, documented openly. PureTouch — Clean Hands, Confident Moments.</p>
+      </div>
+
+      <!-- Exactly 4 quick nav links -->
+      <nav aria-label="Footer Quick Links">
+        <strong style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Quick Links</strong>
+        <a href="#about">About Product</a>
+        <a href="#ingredients">Product Ingredients</a>
+        <a href="#buy">Buy Options</a>
+        <a href="#feedback">Feedback</a>
+      </nav>
+
+      <div>
+        <strong style="color: #fff; font-size: 1rem; margin-bottom: 6px; display: block;">Transparency &amp; Legal</strong>
+        <p class="fine">
+          <a href="privacy.html">Privacy Policy</a> · 
+          <a href="terms.html">Terms of Use</a> · 
+          <a href="disclaimer.html">Product Disclaimer</a>
+        </p>
+        <p class="fine">Product made by <strong>Bibisara Shaikh, Anushka Khaire and Payal Bandagar</strong></p>
+        <p class="fine">Contact: <span id="footPhone">92702*****</span></p>
+        <p class="fine">© <span id="yr"></span> <span data-brand>PureTouch</span>. College laboratory project.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

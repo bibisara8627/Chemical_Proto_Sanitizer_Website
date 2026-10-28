@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product &amp; Safety Disclaimer | PureTouch Hand Sanitizer</title>
+  <meta name="description" content="Safety and regulatory disclaimer for the PureTouch student laboratory hand sanitizer project.">
+  <link rel="canonical" href="https://puretouch-sanitizer.example.com/disclaimer.html">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <meta name="theme-color" content="#1f5f3f">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__in">
+      <a href="index.html#top" class="brand" aria-label="PureTouch Home">
+        <img src="assets/images/logo.svg" alt="PureTouch Logo" width="140" height="35" class="brand__logo-img">
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <nav id="menu" class="nav__menu" aria-label="Main">
+        <a href="index.html#about">About Product</a>
+        <a href="index.html#ingredients">Product Ingredients</a>
+        <a href="index.html#buy">Buy Options</a>
+        <a href="index.html#feedback">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="sec">
+    <div class="wrap wrap--narrow">
+      <header class="sec__head">
+        <p class="eyebrow">Quality &amp; Compliance</p>
+        <h1>Product &amp; Safety Disclaimer</h1>
+        <p><strong>Status:</strong> Draft — for faculty / advisor review before any launch.</p>
+      </header>
+
+      <div class="notice notice--warn" role="note">
+        <strong>Important Medical &amp; Regulatory Notice:</strong> PureTouch is a student laboratory formulation. It is not an approved pharmaceutical drug and has not been evaluated by CDSCO, FDA, or state licensing authorities.
+      </div>
+
+      <article class="card legal-card">
+        <h2>1. No Efficacy or Antimicrobial Claims</h2>
+        <p>In adherence to strict scientific honesty: we do <strong>not</strong> claim that PureTouch "kills 99.9% of germs", is "dermatologically tested", is "100% safe", or follows an approved official WHO formulation until comprehensive third-party lab testing has been performed.</p>
+        <p>The formulation was prepared using 75 ml ethanol, 2 ml glycerol, 4.5 ml hydrogen peroxide, and 20 ml distilled water (total measured components: 101.5 ml). The exact final alcohol percentage depends on the stock strength of raw materials and remains <strong>to be verified by an accredited testing facility</strong>.</p>
+
+        <h2>2. General Safety &amp; Fire Hazard Notice</h2>
+        <div class="notice notice--warn" style="margin: 16px 0;">
+          <strong>Flammable Liquid:</strong> Ethanol is flammable. Keep formulation away from open fire, sparks, lit cigarettes, heaters, and high temperatures.
+        </div>
+        <ul>
+          <li><strong>External use only:</strong> For hand sanitization only. Do not ingest, swallow, or inhale fumes directly.</li>
+          <li><strong>Keep away from eyes:</strong> If contact with eyes occurs, rinse thoroughly with clean running water immediately. Seek medical help if irritation persists.</li>
+          <li><strong>Keep out of reach of children:</strong> Use by minors should be supervised.</li>
+          <li><strong>Storage:</strong> Keep container tightly closed in a cool, well-ventilated dry place away from direct sunlight.</li>
+          <li><strong>Irritation:</strong> Stop use immediately if skin redness, rash, or irritation occurs.</li>
+        </ul>
+
+        <h2>3. Educational Context</h2>
+        <p>This project is conducted under academic guidance for educational documentation purposes only. No commercial distribution or clinical endorsement is implied.</p>
+
+        <p class="fine">Last updated: October 2026. PureTouch Hand Sanitizer Student Project.</p>
+        <div class="btns" style="margin-top: 24px;">
+          <a href="index.html" class="btn btn--primary">Return to Main Page</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <div>
+        <strong data-brand>PureTouch</strong>
+        <p>A student-made hand sanitizer project, documented openly. PureTouch — Clean Hands, Confident Moments.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="index.html#about">About Product</a>
+        <a href="index.html#ingredients">Product Ingredients</a>
+        <a href="index.html#buy">Buy Options</a>
+        <a href="index.html#feedback">Feedback</a>
+      </nav>
+      <div>
+        <p class="fine"><strong>Legal Links:</strong> <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="disclaimer.html">Disclaimer</a></p>
+        <p class="fine">Product made by <strong>Bibisara Shaikh, Anushka Khaire and Payal Bandagar</strong></p>
+        <p class="fine">© <span id="yr"></span> <span data-brand>PureTouch</span>. College project. All content marked draft / for educational review.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script>
+    document.querySelectorAll("[data-brand]").forEach(n => { n.textContent = (window.SITE_CONFIG && window.SITE_CONFIG.brandName) || "PureTouch"; });
+    document.getElementById("yr").textContent = new Date().getFullYear();
+    const toggle = document.querySelector(".nav__toggle"), menu = document.getElementById("menu");
+    if (toggle && menu) {
+      toggle.addEventListener("click", () => {
+        const open = !menu.classList.contains("open");
+        menu.classList.toggle("open", open);
+        toggle.setAttribute("aria-expanded", String(open));
+      });
+    }
+  </script>
+</body>
+</html>
